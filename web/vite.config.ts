@@ -1,13 +1,8 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
-import { TanStackRouterVite } from "@tanstack/router-plugin/vite";
-import viteReact from "@vitejs/plugin-react";
+import deno from "@deno/vite-plugin";
 
-// https://vitejs.dev/config/
+// https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(), TanStackRouterVite(), viteReact()],
-  build: {
-    outDir: "../site/",
-    emptyOutDir: true,
-  },
+  plugins: [deno(), react()],
 });
